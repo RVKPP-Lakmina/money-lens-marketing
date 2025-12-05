@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 
 interface Feature {
@@ -12,7 +10,7 @@ interface Feature {
 }
 
 interface Feature72Props {
-  title: string;
+  title?: string;
   description?: string;
   buttonUrl?: string;
   buttonText?: string;
@@ -20,10 +18,10 @@ interface Feature72Props {
 }
 
 const Feature = ({
-  title = "Everything You Need to Grow Your Wealth",
+  // title = "Everything You Need to Grow Your Wealth",
   description = "Powerful tools and intelligent insights to help you make smarter financial decisions",
-  buttonUrl = "https://shadcnblocks.com",
-  buttonText = "Book a demo",
+  // buttonUrl = "https://shadcnblocks.com",
+  // buttonText = "Book a demo",
   features = [
     {
       id: "feature-1",

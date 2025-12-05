@@ -2,12 +2,11 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ContainerTextFlip } from "./ui/container-text-flip";
 
 interface Hero1Props {
   badge?: string;
-  heading: string;
-  description: string;
+  heading?: string;
+  description?: string;
   buttons?: {
     primary?: {
       text: string;
@@ -18,7 +17,7 @@ interface Hero1Props {
       url: string;
     };
   };
-  image: {
+  image?: {
     src: string;
     alt: string;
   };

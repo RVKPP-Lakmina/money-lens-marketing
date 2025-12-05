@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Counter } from "@/components/counter";
 
 interface Stats8Props {
@@ -16,12 +15,12 @@ interface Stats8Props {
 }
 
 const Stats = ({
-  heading = "Platform performance insights",
-  description = "Ensuring stability and scalability for all users",
-  link = {
-    text: "Read the full impact report",
-    url: "https://www.shadcnblocks.com",
-  },
+  // heading = "Platform performance insights",
+  // description = "Ensuring stability and scalability for all users",
+  // link = {
+  //   text: "Read the full impact report",
+  //   url: "https://www.shadcnblocks.com",
+  // },
   stats = [
     {
       id: "stat-1",
