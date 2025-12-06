@@ -88,7 +88,7 @@ const Testimonial = ({
             businesses
           </p>
         </div>
-        <div className="after:bg-linear-to-t after:from-background relative mt-14 w-full after:absolute after:inset-x-0 after:-bottom-2 after:h-96">
+        {/* <div className="after:bg-linear-to-t after:from-background relative mt-14 w-full after:absolute after:inset-x-0 after:-bottom-2 after:h-96">
           <div
             className="columns-1 gap-5 md:columns-2 lg:columns-3"
             style={{ columnGap: "20px" }}
@@ -132,7 +132,7 @@ const Testimonial = ({
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
