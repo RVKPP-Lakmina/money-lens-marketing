@@ -1,7 +1,8 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowRightIcon } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { AnimatedShinyText } from "./ui/animated-shiny-text";
+import { cn } from "@/lib/utils";
 
 interface Hero1Props {
   badge?: string;
@@ -47,12 +48,23 @@ const Hero = ({
       <div className="container">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            {badge && (
+            {/* {badge && (
               <Badge variant="outline">
                 {badge}
                 <ArrowUpRight className="ml-2 size-4" />
               </Badge>
-            )}
+            )} */}
+           <div
+        className={cn(
+          "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+        )}
+      >
+        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+          <span>{badge}</span>
+          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+        </AnimatedShinyText>
+      </div>
+
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
               {heading}
             </h1>

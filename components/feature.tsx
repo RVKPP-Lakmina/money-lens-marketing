@@ -1,4 +1,3 @@
-
 import { ContainerTextFlip } from "./ui/container-text-flip";
 
 interface Feature {
@@ -7,6 +6,7 @@ interface Feature {
   description: string;
   image: string;
   url: string;
+  bgcolor?: string;
 }
 
 interface Feature72Props {
@@ -30,6 +30,7 @@ const Feature = ({
         "Get personalized recommendations powered by advanced AI algorithms that learn from your financial habits and goals.",
       image: "/feature-1.png",
       url: "https://shadcnblocks.com",
+      bgcolor: "bg-sky-50",
     },
     {
       id: "feature-2",
@@ -38,6 +39,7 @@ const Feature = ({
         "Discover the best investment opportunities in stocks and unit trusts with data-driven insights and real-time analysis.",
       image: "/feature-2.png",
       url: "https://shadcnblocks.com",
+      bgcolor: "bg-lime-50",
     },
     {
       id: "feature-3",
@@ -46,6 +48,7 @@ const Feature = ({
         "Maximize your credit card rewards and benefits with intelligent suggestions tailored to your spending patterns.",
       image: "/feature-3.png",
       url: "https://shadcnblocks.com",
+      bgcolor: "bg-yellow-100",
     },
     {
       id: "feature-4",
@@ -54,6 +57,7 @@ const Feature = ({
         "Track your investments with detailed analytics and get actionable insights to optimize your portfolio performance.",
       image: "/feature-4.png",
       url: "https://shadcnblocks.com",
+      bgcolor: "bg-red-100",
     },
   ],
 }: Feature72Props) => {
@@ -78,7 +82,7 @@ const Feature = ({
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="border-border flex flex-col overflow-clip rounded-xl border"
+              className={`border-border flex flex-col overflow-clip rounded-xl border ${feature?.bgcolor}`}
             >
               <div className="px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
                 <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-2xl lg:mb-6">
