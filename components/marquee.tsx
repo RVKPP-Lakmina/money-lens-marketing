@@ -1,25 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils";
 import { Marquee } from "./ui/marquee";
+import CommentCard from "./comment-card";
 
 const reviews = [
   {
+    id: "1",
     name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it",
-    img: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar5.png",
+    handle: "@jack",
+    text: "I've never seen anything like this before. It's amazing. I love it",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar5.png",
+    replies: 12,
   },
   {
+    id: "2",
     name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar4.png",
+    handle: "@jill",
+    text: "I don't know what to say. I'm speechless. This is amazing.",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar4.png",
+    replies: 8,
   },
   {
+    id: "3",
     name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar3.png",
+    handle: "@john",
+    text: "I'm at a loss for words. This is amazing. I love it.",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar3.png",
+    replies: 5,
+  },
+
+  {
+    id: "4",
+    name: "Jane",
+    handle: "@jane",
+    text: "This is the best thing I've ever seen. I'm so glad I found this.",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar2.png",
+    replies: 15,
+  },
+  {
+    id: "5",
+    name: "Jim",
+    handle: "@jim",
+    text: "I'm blown away. This is amazing. I love it.",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/avatar1.png",
+    replies: 20,
   },
 ];
 
@@ -66,12 +95,12 @@ export function MarqueeDemoVertical() {
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
       <Marquee pauseOnHover vertical className="[--duration:20s]">
         {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <CommentCard key={review.name} comment={review} />
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <CommentCard key={review.name} comment={review} />
         ))}
       </Marquee>
       <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b"></div>

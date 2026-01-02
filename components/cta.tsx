@@ -30,9 +30,6 @@ const Cta = ({
       <div className="container">
         <div className="bg-primary-foreground flex w-full flex-col gap-4  overflow-hidden rounded-lg p-4 md:rounded-xl lg:flex-row lg:items-center lg:p-4">
           <div className="flex-2">
-            {/* <h3 className="mb-3 text-2xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
-              {heading}
-            </h3> */}
             <p className="text-muted-foreground max-w-full lg:text-md font-semibold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-700 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(5,150,105,0.3)]">
               {description}
             </p>
