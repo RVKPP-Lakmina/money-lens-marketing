@@ -9,7 +9,7 @@ const Waitlist = () => {
   return (
     <section className=" relative z-20 flex h-full min-h-screen items-center justify-center overflow-hidden py-10">
       <BackgroundLines className="container flex w-full flex-col items-center justify-center px-4 md:h-full">
-        <h2 className=" py-2 text-center font-sans text-5xl font-semibold tracking-tighter md:py-10 lg:text-8xl bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent drop-shadow-[0_8px_24px_rgba(16,185,129,0.6)] [text-shadow:0_10px_30px_rgba(5,150,105,0.4),0_0_60px_rgba(52,211,153,0.3)]">
+        <h2 className=" py-2 text-center font-sans text-5xl font-semibold tracking-tighter md:py-10 lg:text-8xl bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
           Join the Waitlist
         </h2>
         <p className="text-md text-muted-foreground mx-auto max-w-xl text-center lg:text-lg">
