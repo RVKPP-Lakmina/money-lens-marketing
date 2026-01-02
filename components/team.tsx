@@ -90,7 +90,7 @@ const Team = ({
     <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl text-foreground bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(16,185,129,0.4)]">
+          <h2 className="mb-6 text-3xl p-4 font-bold tracking-tight lg:text-5xl bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
             {heading}
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed">

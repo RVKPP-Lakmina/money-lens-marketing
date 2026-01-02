@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 
 interface Cta10Props {
   heading?: string;
@@ -16,39 +17,43 @@ interface Cta10Props {
 }
 
 const Cta = ({
-  // heading = "Call to Action",
-  description = "Get 2500 LKR in credit when you spend 10,000 LKR as a new Business Plus member.",
+  description = "Get 2500 LKR in credit when you spend 10,000 LKR as a new Business Plus member.",
   buttons = {
     primary: {
       text: "Sign Up Today",
-      url: "https://www.shadcnblocks.com",
+      url: "#",
     },
   },
 }: Cta10Props) => {
   return (
-    <section className="py-10">
-      <div className="container">
-        <div className="bg-primary-foreground flex w-full flex-col gap-4  overflow-hidden rounded-lg p-4 md:rounded-xl lg:flex-row lg:items-center lg:p-4">
-          <div className="flex-2">
-            <p className="text-muted-foreground max-w-full lg:text-md font-semibold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-700 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(5,150,105,0.3)]">
-              {description}
-            </p>
-          </div>
-          <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            {buttons.secondary && (
-              <Button variant="outline" asChild>
-                <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
-              </Button>
-            )}
-            {buttons.primary && (
-              <Button asChild variant="default" size="lg">
-                <a href={buttons.primary.url}>{buttons.primary.text}</a>
-              </Button>
-            )}
-          </div>
+    <StickyBanner className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 shadow-lg">
+      <div className="flex w-full max-w-7xl flex-col items-center justify-between gap-4 py-2 md:flex-row md:gap-6">
+        <p className="mx-0 max-w-[90%] text-sm font-semibold text-white drop-shadow-md md:text-base">
+          {description}
+        </p>
+        <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+          {buttons.secondary && (
+            <Button
+              variant="outline"
+              asChild
+              size="sm"
+              className="bg-white/20 border-white/40 text-white hover:bg-white/30"
+            >
+              <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
+            </Button>
+          )}
+          {buttons.primary && (
+            <Button
+              asChild
+              size="sm"
+              className="bg-white text-emerald-700 hover:bg-white/90 font-bold shadow-md"
+            >
+              <a href={buttons.primary.url}>{buttons.primary.text}</a>
+            </Button>
+          )}
         </div>
       </div>
-    </section>
+    </StickyBanner>
   );
 };
 

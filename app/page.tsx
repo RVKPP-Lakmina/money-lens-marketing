@@ -3,7 +3,7 @@ import { Feature } from "@/components/feature";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { MarqueeDemoVertical } from "@/components/marquee";
-import { Navbar } from "@/components/navbar";
+import NavbarDemo from "@/components/resizable-navbar-demo";
 import { Pricing } from "@/components/pricing";
 import { ScrollBasedVelocityDemo } from "@/components/scroll-based-velocity";
 import { Stats } from "@/components/stats";
@@ -13,19 +13,21 @@ import { Waitlist } from "@/components/waitlist";
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Navbar />
+    <main>
+      <NavbarDemo />
       <Cta />
       <Hero />
-      <Stats />
-      <Feature />
-      <Team />
-      <ScrollBasedVelocityDemo />
-      <Pricing />
-      <Testimonial />
-      <MarqueeDemoVertical />
-      <Waitlist />
-      <Footer />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Stats />
+        <Feature />
+        <Team />
+        <ScrollBasedVelocityDemo />
+        <Pricing />
+        <Testimonial />
+        <MarqueeDemoVertical />
+        <Waitlist />
+        <Footer />
+      </div>
     </main>
   );
 }
