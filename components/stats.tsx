@@ -60,11 +60,14 @@ const Stats = ({
         </div> */}
         <div className="mt-14 grid gap-x-5 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.id} className="flex flex-col gap-5 text-center md:text-left">
-              <div className="text-6xl font-bold">
+            <div
+              key={stat.id}
+              className="flex flex-col gap-5 text-center md:text-left"
+            >
+              <div className="text-6xl font-bold bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
                 <Counter value={stat.value} />
               </div>
-              <p>{stat.label}</p>
+              <p className="font-medium text-base">{stat.label}</p>
             </div>
           ))}
         </div>

@@ -82,7 +82,7 @@ const Pricing = ({
     <section className="py-32">
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <h2 className="text-pretty text-4xl font-semibold lg:text-6xl">
+          <h2 className="text-pretty text-4xl font-semibold lg:text-6xl bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(16,185,129,0.4)]">
             {heading}
           </h2>
           <p className="text-muted-foreground lg:text-xl">{description}</p>
@@ -108,7 +108,7 @@ const Pricing = ({
                     {plan.description}
                   </p>
                   <div className="flex items-end">
-                    <span className="text-4xl font-semibold">
+                    <span className="text-4xl font-semibold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
                       {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                     </span>
                     <span className="text-muted-foreground text-2xl font-semibold">
@@ -151,4 +151,4 @@ const Pricing = ({
   );
 };
 
-export { Pricing};
+export { Pricing };

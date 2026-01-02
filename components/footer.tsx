@@ -1,7 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import React from "react";
 
-
 interface Footer7Props {
   logo?: {
     url: string;
@@ -114,7 +113,9 @@ const Footer = ({
           <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
+                <h3 className="mb-4 font-bold bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(16,185,129,0.3)]">
+                  {section.title}
+                </h3>
                 <ul className="text-muted-foreground space-y-3 text-sm">
                   {section.links.map((link, linkIdx) => (
                     <li

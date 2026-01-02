@@ -9,56 +9,64 @@ const defaultTestimonials = [
   {
     name: "Sarah Chen",
     role: "CEO & Founder",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
     content:
       "This platform has completely transformed how we manage our projects. The intuitive interface and powerful features have increased our team's productivity by 40%. I can't imagine running our business without it. The customer support is outstanding, and the regular updates keep us ahead of the competition.",
   },
   {
     name: "Marcus Rodriguez",
     role: "CTO",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
     content:
       "Outstanding integration capabilities. We've connected all our existing tools seamlessly, and the real-time collaboration features have revolutionized our development workflow.",
   },
   {
     name: "Emily Watson",
     role: "Product Manager",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-7.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-7.webp",
     content:
       "As a product manager, I need tools that help me stay organized and communicate effectively with my team. This platform delivers on both fronts with its comprehensive project management features, clear reporting dashboards, and seamless collaboration tools. The ability to track progress in real-time has been invaluable for our sprint planning and stakeholder updates.",
   },
   {
     name: "David Kim",
     role: "COO",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
     content:
       "The analytics and reporting features have given us unprecedented visibility into our operations. We can now make data-driven decisions with confidence, and our efficiency has improved dramatically across all departments. The custom dashboards and automated reports save us hours every week.",
   },
   {
     name: "Lisa Thompson",
     role: "Tech Lead",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
     content:
       "Exceptional developer experience. The API is well-documented, the SDKs are robust.",
   },
   {
     name: "Alex Johnson",
     role: "Designer",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
     content:
       "The design system and component library have streamlined our design process. We can now create consistent, beautiful interfaces much faster, and the collaboration between design and development has never been smoother. The version control for design assets and the seamless handoff process have eliminated countless back-and-forth iterations.",
   },
   {
     name: "Michael Brown",
     role: "Developer",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp",
     content:
       "The code quality and performance are top-notch. The platform handles our scale effortlessly, and the developer tools make debugging and optimization a breeze. It's been a game-changer for our development team. The comprehensive documentation and active community support make onboarding new developers incredibly smooth.",
   },
   {
     name: "Rachel Green",
     role: "Marketing Director",
-    avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-8.webp",
+    avatar:
+      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-8.webp",
     content:
       "Game-changing marketing automation. We've seen a 60% increase in engagement rates and significantly improved ROI. The platform's insights help us understand our audience better than ever.",
   },
@@ -80,7 +88,7 @@ const Testimonial = ({
     <section className="py-10">
       <div className="container">
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-center text-3xl font-semibold lg:text-5xl">
+          <h2 className="text-center text-3xl font-semibold lg:text-5xl bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(16,185,129,0.4)]">
             What Our Clients Say
           </h2>
           <p className="text-muted-foreground lg:text-xl">

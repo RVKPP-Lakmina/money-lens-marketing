@@ -2,6 +2,7 @@ import { ArrowRight, ArrowRightIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { AnimatedShinyText } from "./ui/animated-shiny-text";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { cn } from "@/lib/utils";
 
 interface Hero1Props {
@@ -54,24 +55,26 @@ const Hero = ({
                 <ArrowUpRight className="ml-2 size-4" />
               </Badge>
             )} */}
-           <div
-        className={cn(
-          "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
-        )}
-      >
-        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>{badge}</span>
-          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-        </AnimatedShinyText>
-      </div>
+            <div
+              className={cn(
+                "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+              )}
+            >
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 font-semibold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
+                <span>{badge}</span>
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              </AnimatedShinyText>
+            </div>
 
-            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
+            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl bg-gradient-to-br from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
               {heading}
             </h1>
-            <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-              {description}
-             
-            </p>
+            <div className="mb-8 max-w-xl">
+              <TextGenerateEffect
+                words={description}
+                className="text-muted-foreground font-normal lg:text-xl"
+              />
+            </div>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
               {buttons.primary && (
                 <Button asChild className="w-full sm:w-auto">
