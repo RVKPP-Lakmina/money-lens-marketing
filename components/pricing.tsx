@@ -38,117 +38,120 @@ interface Pricing2Props {
 }
 
 const Pricing = ({
-  heading = "Pricing",
-  description = "Check out our affordable pricing plans",
-  plans = [
-    {
-      id: "plus",
-      name: "Plus",
-      description: "For personal use",
-      monthlyPrice: "$19",
-      yearlyPrice: "$179",
-      features: [
-        { text: "Up to 5 team members" },
-        { text: "Basic components library" },
-        { text: "Community support" },
-        { text: "1GB storage space" },
-      ],
-      button: {
-        text: "Purchase",
-        url: "https://shadcnblocks.com",
-      },
-    },
-    {
-      id: "pro",
-      name: "Pro",
-      description: "For professionals",
-      monthlyPrice: "$49",
-      yearlyPrice: "$359",
-      features: [
-        { text: "Unlimited team members" },
-        { text: "Advanced components" },
-        { text: "Priority support" },
-        { text: "Unlimited storage" },
-      ],
-      button: {
-        text: "Purchase",
-        url: "https://shadcnblocks.com",
-      },
-    },
-  ],
-}: Pricing2Props) => {
+                   heading = "Pricing",
+                   description = "Start your financial journey with Money Lens",
+                   plans = [
+                     {
+                       id: "free",
+                       name: "Free",
+                       description: "Get started with essential tools",
+                       monthlyPrice: "LKR 0",
+                       yearlyPrice: "LKR 0",
+                       features: [
+                         { text: "FinEd Hub access" },
+                         { text: "Basic financial literacy content" },
+                         { text: "Community support" },
+                       ],
+                       button: {
+                         text: "Get Started",
+                         url: "#waitlist",
+                       },
+                     },
+                     {
+                       id: "pro",
+                       name: "Pro",
+                       description: "Unlock the full Money Lens experience",
+                       monthlyPrice: "LKR 500",
+                       yearlyPrice: "LKR 5,000",
+                       features: [
+                         { text: "AI-Driven Financial Advice" },
+                         { text: "Smart Investment Planning" },
+                         { text: "Full FinEd Hub Access (Sinhala, Tamil, English)" },
+                         { text: "Personalized Portfolio Insights" },
+                         { text: "Bank-Grade Security & Compliance" },
+                         { text: "Real-time market analysis" },
+                         { text: "Priority customer support" },
+                       ],
+                       button: {
+                         text: "Join Waitlist",
+                         url: "#waitlist",
+                       },
+                     },
+                   ],
+                 }: Pricing2Props) => {
   const [isYearly, setIsYearly] = useState(false);
   return (
-    <section className="py-32">
-      <div className="container">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <h2 className="text-pretty text-4xl p-4 font-semibold lg:text-6xl bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-            {heading}
-          </h2>
-          <p className="text-muted-foreground lg:text-xl">{description}</p>
-          <div className="flex items-center gap-3 text-lg">
-            Monthly
-            <Switch
-              checked={isYearly}
-              onCheckedChange={() => setIsYearly(!isYearly)}
-            />
-            Yearly
-          </div>
-          <div className="flex flex-col items-stretch gap-6 md:flex-row">
-            {plans.map((plan) => (
-              <Card
-                key={plan.id}
-                className="flex w-80 flex-col justify-between text-left"
-              >
-                <CardHeader>
-                  <CardTitle>
-                    <p>{plan.name}</p>
-                  </CardTitle>
-                  <p className="text-muted-foreground text-sm">
-                    {plan.description}
-                  </p>
-                  <div className="flex items-end">
-                    <span className="text-4xl font-semibold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
+      <section className="py-32">
+        <div className="container">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
+            <h2 className="text-3xl p-4 font-bold tracking-tight lg:text-5xl bg-gradient-to-r from-green-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+              {heading}
+            </h2>
+            <p className="text-muted-foreground lg:text-xl">{description}</p>
+            <div className="flex items-center gap-3 text-lg">
+              Monthly
+              <Switch
+                  checked={isYearly}
+                  onCheckedChange={() => setIsYearly(!isYearly)}
+              />
+              Yearly
+            </div>
+            <div className="flex flex-col items-stretch gap-6 md:flex-row">
+              {plans.map((plan) => (
+                  <Card
+                      key={plan.id}
+                      className="flex w-80 flex-col justify-between text-left"
+                  >
+                    <CardHeader>
+                      <CardTitle>
+                        <p>{plan.name}</p>
+                      </CardTitle>
+                      <p className="text-muted-foreground text-sm">
+                        {plan.description}
+                      </p>
+                      <div className="flex items-end">
+                    <span
+                        className="text-4xl font-semibold bg-gradient-to-r from-[#156C97] to-[#1a8ec4] bg-clip-text text-transparent">
                       {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                     </span>
-                    <span className="text-muted-foreground text-2xl font-semibold">
-                      {isYearly ? "/yr" : "/mo"}
+                        <span className="text-muted-foreground text-2xl font-semibold">
+                      {plan.id === "free" ? "" : isYearly ? "/yr" : "/mo"}
                     </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <Separator className="mb-6" />
-                  {plan.id === "pro" && (
-                    <p className="mb-3 font-semibold">
-                      Everything in Plus, and:
-                    </p>
-                  )}
-                  <ul className="space-y-4">
-                    {plan.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-center gap-2 text-sm"
-                      >
-                        <CircleCheck className="size-4" />
-                        <span>{feature.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="mt-auto">
-                  <Button asChild className="w-full">
-                    <a href={plan.button.url} target="_blank">
-                      {plan.button.text}
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Separator className="mb-6"/>
+                      {plan.id === "pro" && (
+                          <p className="mb-3 font-semibold">
+                            Everything in Free, and:
+                          </p>
+                      )}
+                      <ul className="space-y-4">
+                        {plan.features.map((feature, index) => (
+                            <li
+                                key={index}
+                                className="flex items-center gap-2 text-sm"
+                            >
+                              <CircleCheck className="size-4"/>
+                              <span>{feature.text}</span>
+                            </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                    <CardFooter className="mt-auto">
+                      <Button asChild className="w-full bg-[#156C97] hover:bg-[#1a8ec4]">
+                        <a href={plan.button.url}>
+                          {plan.button.text}
+                        </a>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 
-export { Pricing };
+export {Pricing};

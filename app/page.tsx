@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <main>
       <NavbarDemo />
-      <Cta />
       <Hero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Stats />
@@ -23,8 +22,8 @@ export default function Home() {
         <Team />
         <ScrollBasedVelocityDemo />
         <Pricing />
-        <Testimonial />
-        <MarqueeDemoVertical />
+        {/*<Testimonial />*/}
+        {/*<MarqueeDemoVertical />*/}
         <Waitlist />
         <Footer />
       </div>
