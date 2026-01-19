@@ -13,8 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Money Lens Marketing",
-  description: "Money Lens Marketing Website",
+    title: "Money Lens Marketing",
+    description: "Money Lens Marketing Website",
+    openGraph: {
+        title: "Money Lens Marketing",
+        description: "Money Lens Marketing Website",
+        images: [
+            {
+                url: "/logo.png",
+                width: 1200,
+                height: 630,
+                alt: "Money Lens Logo",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Money Lens Marketing",
+        description: "Money Lens Marketing Website",
+        images: ["/logo.png"],
+    },
 };
 
 export default function RootLayout({
