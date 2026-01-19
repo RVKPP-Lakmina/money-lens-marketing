@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import {
   Navbar,
   NavBody,
@@ -16,19 +17,19 @@ export default function NavbarDemo() {
   const navItems = [
     {
       name: "Home",
-      link: "#",
+      link: "/",
     },
     {
       name: "Features",
-      link: "#features",
+      link: "/#features",
     },
     {
       name: "Pricing",
-      link: "#pricing",
+      link: "/#pricing",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/contact",
     },
   ];
 
@@ -42,7 +43,13 @@ export default function NavbarDemo() {
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
           <NavbarButton variant="secondary">Login</NavbarButton>
-          <NavbarButton variant="gradient">Get Started Free</NavbarButton>
+          <Link
+            href="https://app.moneylens.lk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <NavbarButton variant="gradient">Get Started Free</NavbarButton>
+          </Link>
         </div>
       </NavBody>
 
@@ -79,6 +86,9 @@ export default function NavbarDemo() {
               Login
             </NavbarButton>
             <NavbarButton
+              href="https://app.moneylens.lk/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
               variant="gradient"
               className="w-full"
